@@ -1,0 +1,30 @@
+[
+    {
+      "imageURL": "https://avatars.githubusercontent.com/u/89378479?v=4",
+      "fullName": "Dzenan Kosuta",
+      "description": "Dzenan is rising Web developer...",
+      "location": "Novi pazar, Serbia",
+      "goToRepositories": "https://github.com/dzenankosuta?tab=repositories"
+    },
+    {
+      "imageURL": "https://avatars.githubusercontent.com/u/111905831?v=4",
+      "fullName": "Alen Muslic",
+      "description": "Alen is rising Web developer...",
+      "location": "Novi pazar, Serbia",
+      "goToRepositories": "https://github.com/alenmuslic?tab=repositories"
+    },
+    {
+      "imageURL": "https://www.borisradivojkov.com/assets/images/profesionalni-poslovni-portret-rukovodioca-600x600.jpg",
+      "fullName": "Aladin Zecic",
+      "description": "Aladin is rising Web developer...",
+      "location": "Novi pazar, Serbia",
+      "goToRepositories": "https://github.com/aladinzecic?tab=repositories"
+    },
+    {
+      "imageURL": "https://avatars.githubusercontent.com/u/111905979?v=4",
+      "fullName": "Haris Muslic",
+      "description": "Haris is rising Web developer...",
+      "location": "Novi pazar, Serbia",
+      "goToRepositories": "https://github.com/harismuslic04?tab=repositories"
+    }
+  ]

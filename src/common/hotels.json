@@ -1,0 +1,74 @@
+[
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/1000000/50000/41100/41081/18cfc8a0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "The STRAT Hotel, Casino & SkyPod",
+      "stars": "4",
+      "description": "4-star resort with 6 restaurants, near Stratosphere Tower",
+      "rating": "6.2/10",
+      "reviews": "11,820 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/1000000/20000/16000/15930/64fa82f5.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Treasure Island - TI Las Vegas Hotel Casino, a Radisson Hotel 4.0 star property",
+      "stars": "4",
+      "description": "4-star resort with full-service spa, connected to a shopping center, near Mirage Volcano",
+      "rating": "8.0/10",
+      "reviews": "17685 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/1000000/50000/41100/41081/18cfc8a0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "The Venetian Resort Las Vegas",
+      "stars": "5",
+      "description": "Luxury resort with full-service spa, connected to the convention center, near Fashion Show Mall",
+      "rating": "8.8/10",
+      "reviews": "16,446 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Paramount Times Square",
+      "stars": "4",
+      "description": "4-star hotel with restaurant, near Broadway",
+      "rating": "7.2/10",
+      "reviews": "1,030 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Four Points By Sheraton New York Downtown",
+      "stars": "2.5",
+      "description": "3.5-star hotel with restaurant, near One World Trade Center",
+      "rating": "7.4/10",
+      "reviews": "1,012 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Arlo Midtown",
+      "stars": "4",
+      "description": "4-star hotel with restaurant, near Madison Square Garden",
+      "rating": "9.2/10",
+      "reviews": "3,310 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Paramount Times Square",
+      "stars": "4",
+      "description": "4-star hotel with restaurant, near Broadway",
+      "rating": "7.2/10",
+      "reviews": "1,030 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Four Points By Sheraton New York Downtown",
+      "stars": "3.5",
+      "description": "3.5-star hotel with restaurant, near One World Trade Center",
+      "rating": "7.4/10",
+      "reviews": "1,012 reviews"
+    },
+    {
+      "imageURL": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "name": "Arlo Midtown",
+      "stars": "4",
+      "description": "4-star hotel with restaurant, near Madison Square Garden",
+      "rating": "9.2/10",
+      "reviews": "3,310 reviews"
+    }
+  ]

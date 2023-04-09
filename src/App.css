@@ -1,7 +1,26 @@
-.header{
+.header {
   height: 15vh;
+  background-color: navy;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  background-color: blueviolet;
+}
+
+.main {
+  margin: 50px auto;
+  width: 40%;
+  height: 160px;
+  background-color: aqua;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hotels {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(40%, auto);
 }
