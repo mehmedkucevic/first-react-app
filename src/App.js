@@ -2,14 +2,23 @@ import React, { useState } from "react";
 import "./App.css";
 import Greeting from "./components/Greetings/Greeting";
 import { Navbar } from "./components/Navbar/Navbar";
-import Card from "./components/Cards/PersonCard/Card";
+import PersonCard from "./components/Cards/PersonCard/PersonCard";
 import persons from "./common/persons.json";
 import hotels from "./common/hotels.json";
 import HotelCard from "./components/Cards/HotelCard/HotelCard";
+import Form from "./components/Form/Form";
+import teams from "./common/teams.json";
+const poruke = [
+  "danas je subota",
+  "u subotu je lepo vreme",
+  "subota je dan za kupovinu",
+  "subota je dan za kafu",
+];
 
 function App() {
   // const [count, setCount] = React.useState(0);
   const [count, setCount] = useState(0);
+  const [arr, setArr] = useState(poruke);
   // setCount je metoda pomocu koje menjamo vrednost count state_a:
   const increaseCount = () => {
     setCount(count + 1);
@@ -18,8 +27,19 @@ function App() {
     setCount(count - 1);
   };
   // const x = 10;
+
+  const [name, setName] = useState("");
+
+  // 2. jedan state za sve input polja
+  const [userInput, setUserInput] = useState({
+    name: "",
+    lastname: "",
+    email: "",
+    hobby: "",
+    phone: "",
+  });
+  // console.log(name);
   return (
-    //  React.createElement("p", {}, "Neki paragraf");
     <>
       {" "}
       {/* Fragment - najcesce se koristi za wrappovanje */}
@@ -36,7 +56,8 @@ function App() {
           }}
         >
           {persons.map((person) => (
-            <Card
+            <PersonCard
+              key={persons.id}
               imageURL={person.imageURL}
               fullName={person.fullName}
               location={person.location}
@@ -53,16 +74,17 @@ function App() {
               style={{ width: "40px" }}
               onClick={() => {
                 console.log("povecanje");
-                increaseCount();
+                setCount(count + 1);
               }}
             >
               +
             </button>
           </div>
         </div>
-        <div className="Hotels">
+        <div className="hotels">
           {hotels.map((hotel) => (
             <HotelCard
+              key={hotels.id}
               imageURL={hotel.imageURL}
               name={hotel.name}
               stars={hotel.stars}
@@ -72,66 +94,7 @@ function App() {
             />
           ))}
         </div>
-        <div className="formContainer">
-          <form onSubmit={() => {}}>
-            <labbel htmlFor="fisrtName">Enter your name</labbel>
-            <input
-              type="text"
-              id="fisrtName"
-              name="fisrtName"
-              required
-              value={name}
-              onChange={() => {}}
-            ></input>{" "}
-            <br />
-            <br />
-            <labbel htmlFor="lastName">Enter your last name</labbel>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              required
-              value={"text"}
-              onChange={() => {}}
-            ></input>{" "}
-            <br />
-            <br />
-            <labbel htmlFor="email">Enter your email</labbel>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              value={"text"}
-              onChange={() => {}}
-            ></input>{" "}
-            <br />
-            <br />
-            <labbel htmlFor="hobby">Enter your hobby</labbel>
-            <input
-              type="text"
-              id="hobby"
-              name="hobby"
-              value={"text"}
-              onChange={() => {}}
-            ></input>{" "}
-            <br />
-            <br />
-            <labbel htmlFor="number">Enter your phone number</labbel>
-            <input
-              type="tel"
-              id="number"
-              name="number"
-              value={"text"}
-              onChange={() => {}}
-            ></input>{" "}
-            <br />
-            <br />
-          </form>
-        </div>
       </div>
     </>
   );
 }
-
-export default App;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./PersonCard.css";
 import { FaGithub } from "react-icons/fa";
 
 export default function PersonCard(props) {

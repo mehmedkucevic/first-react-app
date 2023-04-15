@@ -1,0 +1,52 @@
+.card {
+  width: 250px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 15px;
+  box-shadow: 2px 2px 6px rgba(25, 25, 25, 0.8),
+    -2px -2px 6px rgba(25, 25, 25, 0.8);
+  /* transition: transform 0.2s ease-in; */
+}
+
+/* .card:hover {
+  transform: scale(1.05);
+} */
+
+.firstPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.secondPart {
+  margin-top: 25px;
+  border-top: 2px solid grey;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.secondPart p {
+  text-align: center;
+}
+
+.img {
+  margin-top: 25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.gitHub {
+  position: absolute;
+  top: 130px;
+}
