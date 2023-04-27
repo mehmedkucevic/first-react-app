@@ -1,0 +1,36 @@
+.card {
+    width: 250px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .card span {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .card .author {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+  }
+  .container {
+    margin-top: 20px;
+    margin-left: 40px;
+  
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-gap: 20px;
+  }
