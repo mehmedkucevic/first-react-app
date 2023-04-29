@@ -1,7 +1,10 @@
 .header {
   height: 15vh;
   background-color: rgb(36, 51, 91);
-  display: flex;
+  display: flex end;
   justify-content: flex-start;
   align-items: center;
+}
+.logo{
+  align-self: flex-start;
 }

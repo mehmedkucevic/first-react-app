@@ -12,6 +12,7 @@ import TeamCard from "./components/Cards/TeamCard/TeamCard";
 import QuoteCard from "./components/Cards/QuoteCard/QuoteCard";
 import Pagination from "./components/Pagination/Pagination";
 import { Route, Routes } from "react-router-dom";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 // const persons = [
 //   {
@@ -239,31 +240,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Form />} />
-        <Route
-          path="/about-us"
-          element={
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(4, 250px)",
-                justifyContent: "center",
-                gridAutoRows: "minmax(420px, auto)",
-                gridGap: "40px",
-              }}
-            >
-              {persons.map((person) => (
-                <PersonCard
-                  key={person.id}
-                  imageURL={person.imageURL}
-                  fullName={person.fullName}
-                  location={person.location}
-                  description={person.description}
-                  goToRepositories={person.goToRepositories}
-                />
-              ))}
-            </div>
-          }
-        />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/hotels" element={<AboutUs />} />
       </Routes>
     </>
   );
