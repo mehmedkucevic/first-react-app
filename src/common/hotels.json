@@ -10,7 +10,6 @@
   },
   {
     "id": 2,
-
     "imageURL": "https://images.trvl-media.com/lodging/1000000/20000/16000/15930/64fa82f5.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Treasure Island - TI Las Vegas Hotel Casino, a Radisson Hotel 4.0 star property",
     "stars": 4,
@@ -20,7 +19,6 @@
   },
   {
     "id": 3,
-
     "imageURL": "https://images.trvl-media.com/lodging/1000000/50000/41100/41081/18cfc8a0.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "The Venetian Resort Las Vegas",
     "stars": 5,
@@ -30,7 +28,6 @@
   },
   {
     "id": 4,
-
     "imageURL": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Paramount Times Square",
     "stars": 4,
@@ -40,7 +37,6 @@
   },
   {
     "id": 5,
-
     "imageURL": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Four Points By Sheraton New York Downtown",
     "stars": 3.5,
@@ -50,7 +46,6 @@
   },
   {
     "id": 6,
-
     "imageURL": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Arlo Midtown",
     "stars": 4,
@@ -60,7 +55,6 @@
   },
   {
     "id": 7,
-
     "imageURL": "https://images.trvl-media.com/lodging/1000000/30000/24300/24245/ab463c41.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Paramount Times Square",
     "stars": 4,
@@ -70,7 +64,6 @@
   },
   {
     "id": 8,
-
     "imageURL": "https://images.trvl-media.com/lodging/14000000/13410000/13400100/13400088/3ddc9447.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Four Points By Sheraton New York Downtown",
     "stars": 3.5,
@@ -80,7 +73,6 @@
   },
   {
     "id": 9,
-    
     "imageURL": "https://images.trvl-media.com/lodging/49000000/48670000/48669400/48669360/4b28c418.jpg?impolicy=resizecrop&rw=1200&ra=fit",
     "name": "Arlo Midtown",
     "stars": 4,

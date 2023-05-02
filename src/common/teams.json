@@ -1,32 +1,32 @@
 [
-    {
-  "id":1,
-  "name":"Arsenal",
-  "points":72,
-  "matches":30
-    },
-    {
-      "id":2,
-      "name":"Man City",
-      "points":64,
-      "matches":7
-        },
-        {
-          "id":3,
-          "name":"Manchester",
-          "points":35,
-          "matches":9
-            },
-            {
-              "id":4,
-              "name":"Liverpool",
-              "points":100,
-              "matches":12
-                },
-                {
-                    "id":5,
-                    "name":"Man United",
-                    "points":5,
-                    "matches":3
-                      }
-  ]
+  {
+    "id": 1,
+    "name": "Arsenal",
+    "points": 72,
+    "matches": 30
+  },
+  {
+    "id": 2,
+    "name": "Man City",
+    "points": 64,
+    "matches": 30
+  },
+  {
+    "id": 3,
+    "name": "Newcastle",
+    "points": 56,
+    "matches": 31
+  },
+  {
+    "id": 4,
+    "name": "Liverpool",
+    "points": 51,
+    "matches": 29
+  },
+  {
+    "id": 5,
+    "name": "Man United",
+    "points": 48,
+    "matches": 31
+  }
+]

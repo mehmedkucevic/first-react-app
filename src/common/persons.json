@@ -1,6 +1,6 @@
 [
   {
-    
+    "id": 1,
     "imageURL": "https://avatars.githubusercontent.com/u/89378479?v=4",
     "fullName": "Dzenan Kosuta",
     "description": "Dzenan is rising Web developer...",
@@ -8,6 +8,7 @@
     "goToRepositories": "https://github.com/dzenankosuta?tab=repositories"
   },
   {
+    "id": 2,
     "imageURL": "https://avatars.githubusercontent.com/u/111905831?v=4",
     "fullName": "Alen Muslic",
     "description": "Alen is rising Web developer...",
@@ -15,6 +16,7 @@
     "goToRepositories": "https://github.com/alenmuslic?tab=repositories"
   },
   {
+    "id": 3,
     "imageURL": "https://www.borisradivojkov.com/assets/images/profesionalni-poslovni-portret-rukovodioca-600x600.jpg",
     "fullName": "Aladin Zecic",
     "description": "Aladin is rising Web developer...",
@@ -22,6 +24,7 @@
     "goToRepositories": "https://github.com/aladinzecic?tab=repositories"
   },
   {
+    "id": 4,
     "imageURL": "https://avatars.githubusercontent.com/u/111905979?v=4",
     "fullName": "Haris Muslic",
     "description": "Haris is rising Web developer...",

@@ -1,10 +1,11 @@
-import React from 'react';
-import hotels from '../common/hotels.json';
-import HotelCard from '../../components/Cards/HotelCard/HotelCard';
+import React from "react";
+import HotelCard from "../../components/Cards/HotelCard/HotelCard";
+import hotels from "../../common/hotels.json";
+import "./Hotels.css";
 
 export default function Hotels() {
   return (
-    <div>
+    <div className="hotels">
       {hotels.map((hotel) => (
         <HotelCard
           key={hotel.id}

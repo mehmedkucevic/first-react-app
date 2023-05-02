@@ -4,23 +4,27 @@ import { NavLink } from "react-router-dom";
 
 function Navbar(props) {
   const acitveStyles = {
-    backgroundColor: "lightblue",
-    padding:"7px",
-    borderradius:"10px",
-    color: "darkblue",
+    backgroundColor: "#7119ff",
+    padding: "11px",
+    borderRadius: "30px",
+    color: "#bebebe",
     textDecoration: "none",
-    margin:"20px",
+    margin: "20px",
+    boxShadow: "rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px" ,
+    scroll:"smooth",
+    transition:"transform 0.4s ease-in-out",
   };
   const styles = {
-    backgroundColor: "blue",
     textDecoration: "none",
+    color: "white",
+    margin: "20px",
   };
   return (
     <header className="header">
       <NavLink
         to={"/"}
         style={({ isActive }) => (isActive ? acitveStyles : styles)}
-        className = "logos"
+        className="logo"
       >
         <h1 style={{ fontFamily: "Arial" }}>Logo</h1>
       </NavLink>
@@ -29,6 +33,24 @@ function Navbar(props) {
         style={({ isActive }) => (isActive ? acitveStyles : styles)}
       >
         <h1 style={{ fontFamily: "Arial" }}>About Us</h1>
+      </NavLink>
+      <NavLink
+        to={"/hotels"}
+        style={({ isActive }) => (isActive ? acitveStyles : styles)}
+      >
+        <h1 style={{ fontFamily: "Arial" }}>Hotels</h1>
+      </NavLink>
+      <NavLink
+        to={"/teams"}
+        style={({ isActive }) => (isActive ? acitveStyles : styles)}
+      >
+        <h1 style={{ fontFamily: "Arial" }}>Teams</h1>
+      </NavLink>
+      <NavLink
+        to={"/quotes"}
+        style={({ isActive }) => (isActive ? acitveStyles : styles)}
+      >
+        <h1 style={{ fontFamily: "Arial" }}>Quotes</h1>
       </NavLink>
     </header>
   );

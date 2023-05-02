@@ -1,0 +1,7 @@
+.about-us-container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    grid-auto-rows: minmax(420px, auto);
+    grid-gap: 40px;
+  }
