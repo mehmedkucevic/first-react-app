@@ -3,30 +3,39 @@
     "id": 1,
     "name": "Arsenal",
     "points": 72,
-    "matches": 30
+    "matches": 30,
+    "information": "Treci najuspesniji klub u engleskoj"
   },
   {
     "id": 2,
     "name": "Man City",
     "points": 64,
-    "matches": 30
+    "matches": 30,
+    "information": "mambardjambar"
+
   },
   {
     "id": 3,
     "name": "Newcastle",
     "points": 56,
-    "matches": 31
+    "matches": 31,
+    "information": "i ovo je fudbalski klub"
+
   },
   {
     "id": 4,
     "name": "Liverpool",
     "points": 51,
-    "matches": 29
+    "matches": 29,
+    "information": "ne znam  sta da kazem"
+
   },
   {
     "id": 5,
     "name": "Man United",
     "points": 48,
-    "matches": 31
+    "matches": 31,
+    "information": "ovo je fudbalski klub"
+
   }
 ]
