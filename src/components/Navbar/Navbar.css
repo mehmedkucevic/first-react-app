@@ -10,5 +10,5 @@
 .logo {
   position: absolute;
   left: 20px;
-  box-shadow: rgb(0, 0, 0) 0px 48px 100px 0px;
+  /* box-shadow: rgb(0, 0, 0) 0px 48px 100px 0px; */
 }

@@ -7,6 +7,9 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import Hotels from "./pages/Hotels/Hotels";
 import Teams from "./pages/Teams/Teams";
 import Quotes from "./pages/Quotes/Quotes";
+import Hotel from "./pages/hotel/Hotel";
+import { Register } from "./pages/Register/Register";
+import { Login } from "./pages/Login/Login";
 
 // const poruke = [
 //   "Danas je subota",
@@ -100,6 +103,9 @@ function App() {
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/quotes" element={<Quotes />} />
+        <Route path="/hotels/:id" element={<Hotel />} />
+        <Route path="/login" element={ < Login/>} />
+        <Route path="/register" element={ < Register />} />
       </Routes>
     </>
   );

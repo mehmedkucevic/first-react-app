@@ -10,9 +10,10 @@ function Navbar(props) {
     color: "#bebebe",
     textDecoration: "none",
     margin: "20px",
-    boxShadow: "rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px" ,
-    scroll:"smooth",
-    transition:"transform 0.4s ease-in-out",
+    boxShadow:
+      "rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px",
+    scroll: "smooth",
+    transition: "transform 0.4s ease-in-out",
   };
   const styles = {
     textDecoration: "none",
@@ -27,6 +28,18 @@ function Navbar(props) {
         className="logo"
       >
         <h1 style={{ fontFamily: "Arial" }}>Logo</h1>
+      </NavLink>
+      <NavLink
+        to={"/login"}
+        style={({ isActive }) => (isActive ? acitveStyles : styles)}
+      >
+        <h1 style={{ fontFamily: "Arial" }}>Login</h1>
+      </NavLink>
+      <NavLink
+        to={"/register"}
+        style={({ isActive }) => (isActive ? acitveStyles : styles)}
+      >
+        <h1 style={{ fontFamily: "Arial" }}>Register</h1>
       </NavLink>
       <NavLink
         to={"/about-us"}

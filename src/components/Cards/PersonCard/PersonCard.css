@@ -17,6 +17,7 @@
 } 
 
 .firstPart {
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -26,7 +27,7 @@
 
 .secondPart {
   margin-top: 25px;
-  border-top: 2px solid grey;
+  border-top: 2px solid rgb(152, 63, 255);
   padding: 15px;
   display: flex;
   flex-direction: column;

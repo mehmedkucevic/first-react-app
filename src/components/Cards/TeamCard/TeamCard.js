@@ -12,13 +12,14 @@ function TeamCard({
   information,
   id,
 }) {
-  // console.log({ BASE_URL }); radi primera
   const [closed, setClosed] = useState(true);
+  // console.log({ BASE_URL }); radi primera
   useEffect(() => {
     if (extended !== null && extended !== id) {
       setClosed(true);
     }
   }, [extended]);
+
   useEffect(() => {
     if (!closed) {
       setExtended(id);
@@ -26,7 +27,6 @@ function TeamCard({
       setExtended(null);
     }
   }, [closed]);
-  console.log(information);
   return (
     <div className="cardContainer2">
       <div className="card2">
@@ -39,12 +39,12 @@ function TeamCard({
             setClosed(!closed);
           }}
         >
-          {closed ? <span>Prikazi vise</span> : <span>prikazi manje</span>}
+          {closed ? <span>Prikazi vise</span> : <span>Prikazi manje</span>}
         </button>
       </div>
       {!closed && (
         <div className="info">
-          <p>{information} </p>
+          <p>{information}</p>
         </div>
       )}
     </div>

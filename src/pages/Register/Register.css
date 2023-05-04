@@ -1,0 +1,17 @@
+.rCointener{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    height: auto;
+}
+input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+}

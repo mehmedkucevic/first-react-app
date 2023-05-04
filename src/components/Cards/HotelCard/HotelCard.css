@@ -6,9 +6,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: flex-start;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   border-radius: 10px;  
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
 }
 .hotelimg {
   border-top-left-radius: 10px;
@@ -32,6 +34,11 @@
 }
 
 .hotelrat {
+  align-items: center;
   text-align: center;
   font-weight: bold;
+}
+.Hotelcard:hover{
+  transform: scale(1.05);
+  transition: transform 0.4s ease-in-out; 
 }
