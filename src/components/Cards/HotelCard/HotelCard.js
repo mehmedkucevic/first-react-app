@@ -49,7 +49,7 @@ export default function HotelCard(props) {
                 rating < 7 ? "orange" : rating < 9 ? "yellow" : "green",
             }}
           >
-            {stars(props.stars)}
+            {stars(props.stars)} 
           </h3>
           <p className="hoteldesc">{props.description}</p>
           <p>
