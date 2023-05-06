@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./Login.css";
 import axios from "axios";
 export function Login() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   async function loginUser(data) {
     try {
       const user = await axios.post(
@@ -10,6 +14,7 @@ export function Login() {
       );
       const userInfo = await user.data;
       console.log(userInfo);
+      setIsLoggedIn(true);
     } catch (err) {
       console.log(err.response.data.err);
     }
@@ -22,12 +27,6 @@ export function Login() {
       password,
     });
   }
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  //   const [userInput, setUserInput] = useState({
-  //     email: "",
-  //     password:""
-  //   })
 
   return (
     <div className="cointener">
@@ -44,23 +43,24 @@ export function Login() {
           placeholder="Email"
           name="email"
           required
-        ></input>
+        />
         <label className="label">Password</label>
         <input
           className="input"
-          type="password "
-          name="password "
+          type="password"
+          name="password"
           placeholder="Password"
           value={password}
           onChange={(e) => {
             setPassword(e.target.value);
           }}
           required
-        ></input>
+        />
         <button id="login" onClick={handleClick}>
           Login
         </button>
       </form>
+      {isLoggedIn && <alert><h1>You are logged in</h1></alert>}
     </div>
   );
 }

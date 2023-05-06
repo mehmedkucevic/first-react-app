@@ -56,3 +56,10 @@
   button:active {
     transform: scale(0.95);
   }
+alert{
+  /* border-radius: 15px; */
+  background-color: rgb(153, 0, 255);
+position:relative;
+top:-275px;
+right: -342px;
+}

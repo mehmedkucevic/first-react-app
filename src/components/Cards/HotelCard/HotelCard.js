@@ -41,6 +41,7 @@ export default function HotelCard(props) {
     <div className="hotelgrid">
       <div className="Hotelcard">
         <img src={props.imageURL} alt={"profile_img"} className="hotelimg" />
+
         <div>
           <p className="hotelname">{props.name}</p>
           <h3
@@ -49,7 +50,7 @@ export default function HotelCard(props) {
                 rating < 7 ? "orange" : rating < 9 ? "yellow" : "green",
             }}
           >
-            {stars(props.stars)} 
+            {stars(props.stars)}
           </h3>
           <p className="hoteldesc">{props.description}</p>
           <p>
