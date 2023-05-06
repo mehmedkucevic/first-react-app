@@ -90,7 +90,7 @@ function App() {
               console.log("okrenuo se niz");
             }}
           >
-            Promeni raspored poruka
+            Promeni raspored poruka`
           </button>
           {arr.map((poruka) => (
             <p>{poruka}</p>
@@ -99,13 +99,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Form />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/hotels" element={<Hotels />} />
         <Route path="/teams" element={<Teams />} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/hotels/:id" element={<Hotel />} />
-        <Route path="/login" element={ < Login/>} />
-        <Route path="/register" element={ < Register />} />
       </Routes>
     </>
   );

@@ -4,20 +4,16 @@ import { NavLink } from "react-router-dom";
 
 function Navbar(props) {
   const acitveStyles = {
-    backgroundColor: "#7119ff",
-    padding: "11px",
-    borderRadius: "30px",
-    color: "#bebebe",
+    backgroundColor: "lightblue",
+    padding: "7px",
+    borderRadius: "10px",
+    color: "darkblue",
     textDecoration: "none",
     margin: "20px",
-    boxShadow:
-      "rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px",
-    scroll: "smooth",
-    transition: "transform 0.4s ease-in-out",
   };
   const styles = {
     textDecoration: "none",
-    color: "white",
+    color: "#fefefe",
     margin: "20px",
   };
   return (

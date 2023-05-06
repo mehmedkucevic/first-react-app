@@ -43,21 +43,14 @@ export default function HotelCard(props) {
         <img src={props.imageURL} alt={"profile_img"} className="hotelimg" />
         <div>
           <p className="hotelname">{props.name}</p>
-          <div className="stars">
-          <h3 
+          <h3
             style={{
-              textAlign: "center",
-              alignSelf:"center",
-              alignItems:"center",
-              width:"130px",
               background:
                 rating < 7 ? "orange" : rating < 9 ? "yellow" : "green",
             }}
           >
-
             {stars(props.stars)}
           </h3>
-          </div>
           <p className="hoteldesc">{props.description}</p>
           <p>
             <span className="hotelrat"> {props.rating} </span>{" "}
