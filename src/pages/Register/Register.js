@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Register.css";
 import axios from "axios";
-import BASE_URL from "../../config";
+import { BASE_URL } from "../../config/api";
 
 export function Register() {
   const [userInput, setUserInput] = useState({
@@ -9,68 +9,97 @@ export function Register() {
     email: "",
     password: "",
   });
-
+  const [message, setMessage] = useState("");
+  const [incorrectStyles, setIncorrectStyles] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const colorMessage = incorrectStyles ? "#f00" : "#000";
   async function registerUser(data) {
     try {
-      const response = await axios.post(
-        `${BASE_URL}/users/register`,
-        data
-      );
-      const userInfo = await response.data;
-
+      const user = await axios.post(`${BASE_URL}/users`, data);
+      const userInfo = await user.data;
       console.log(userInfo);
-    } catch (error) {
-      console.log(error);
+      setIncorrectStyles(false);
+      setIsSuccess(true);
+      setMessage("Uspesno ste registrovani na nasem sajtu!");
+      setUserInput({
+        name: "",
+        email: "",
+        password: "",
+      });
+    } catch (err) {
+      console.log(err.response.data.err);
+      setIsSuccess(false);
+      setIncorrectStyles(true);
+      setMessage(err.response.data.err);
     }
   }
-
-  function handleSubmit(e) {
+  function handleClick(e) {
     e.preventDefault();
     registerUser(userInput);
   }
 
+  console.log(userInput);
   return (
     <div className="rCointener">
-      <form onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        <label>Name</label>
-        <input
-          className="rInput"
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={userInput.name}
-          onChange={(e) => {
-            setUserInput({ ...userInput, name: e.target.value });
-          }}
-          required
-        />
-        <label>Email</label>
-        <input
-          type="email"
-          className="rInput"
-          value={userInput.email}
-          onChange={(e) => {
-            setUserInput({ ...userInput, email: e.target.value });
-          }}
-          placeholder="Enter Email"
-          name="email"
-          required
-        />
-        <label>Password</label>
-        <input
-          placeholder="Enter Password"
-          className="rInput"
-          type="password"
-          name="password"
-          value={userInput.password}
-          onChange={(e) => {
-            setUserInput({ ...userInput, password: e.target.value });
-          }}
-          required
-        />
-        <button type="submit">Register</button>
-      </form>
+      {isSuccess ? (
+        <h2 style={{ textAlign: "center", color: colorMessage }}>
+          {message && message}
+        </h2>
+      ) : (
+        <form>
+          <h1>Register</h1>
+          <p style={{ textAlign: "center", color: colorMessage }}>
+            {message && message}
+          </p>
+          {/* {message ? <p>{message}</p> : <></>} */}
+          <label>Name</label>
+          <input
+            className="rInput"
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={userInput.name}
+            onChange={(e) =>
+              setUserInput((prev) => ({
+                ...prev,
+                name: e.target.value,
+              }))
+            }
+            required
+          ></input>
+          <label>Email</label>
+          <input
+            type="email"
+            className="rInput"
+            value={userInput.email}
+            onChange={(e) =>
+              setUserInput((prev) => ({
+                ...prev,
+                email: e.target.value,
+              }))
+            }
+            placeholder="Enter Email"
+            name="email"
+            required
+          ></input>
+          <label>Password</label>
+          <input
+            placeholder="Enter Password"
+            className="rInput"
+            type="password"
+            name="password"
+            value={userInput.password}
+            onChange={(e) =>
+              setUserInput((prev) => ({
+                ...prev,
+                password: e.target.value,
+              }))
+            }
+            required
+          ></input>
+          <button onClick={handleClick}>Register</button>
+        </form>
+      )}
     </div>
   );
 }

@@ -1,22 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Login.css";
 import axios from "axios";
+import { BASE_URL } from "../../config/api";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
+
 export function Login() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const navigation = useNavigate();
+  const { setToken } = useContext(AppContext);
 
   async function loginUser(data) {
     try {
-      const user = await axios.post(
-        "https://nit-backend.onrender.com/users/login",
-        data
-      );
+      const user = await axios.post(`${BASE_URL}/users/login`, data);
       const userInfo = await user.data;
       console.log(userInfo);
-      setIsLoggedIn(true);
+      // console.log(userInfo.token);
+      localStorage.setItem("token", userInfo.token);
+      setToken(userInfo.token);
+      navigation("/");
     } catch (err) {
       console.log(err.response.data.err);
+      localStorage.removeItem("token");
+      setToken(null);
     }
   }
 
@@ -27,6 +32,12 @@ export function Login() {
       password,
     });
   }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  //   const [userInput, setUserInput] = useState({
+  //     email: "",
+  //     password:""
+  //   })
 
   return (
     <div className="cointener">
@@ -43,7 +54,7 @@ export function Login() {
           placeholder="Email"
           name="email"
           required
-        />
+        ></input>
         <label className="label">Password</label>
         <input
           className="input"
@@ -55,12 +66,11 @@ export function Login() {
             setPassword(e.target.value);
           }}
           required
-        />
+        ></input>
         <button id="login" onClick={handleClick}>
           Login
         </button>
       </form>
-      {isLoggedIn && <alert><h1>You are logged in</h1></alert>}
     </div>
   );
 }

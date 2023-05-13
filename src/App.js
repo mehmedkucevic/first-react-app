@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import Form from "./components/Form/Form";
@@ -10,6 +10,8 @@ import Quotes from "./pages/Quotes/Quotes";
 import Hotel from "./pages/hotel/Hotel";
 import { Register } from "./pages/Register/Register";
 import { Login } from "./pages/Login/Login";
+import { AppContext } from "./context/AppContext";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 // const poruke = [
 //   "Danas je subota",
@@ -40,6 +42,12 @@ function App() {
   //   const reversed = _arr.reverse();
   //   setArr(reversed);
   // };
+
+  const { token, setToken } = useContext(AppContext);
+  useEffect(() => {
+    const localToken = localStorage.getItem("token");
+    setToken(localToken);
+  }, []);
 
   return (
     //  React.createElement("p", {}, "Neki paragraf");
@@ -90,23 +98,68 @@ function App() {
               console.log("okrenuo se niz");
             }}
           >
-            Promeni raspored poruka`
+            Promeni raspored poruka
           </button>
           {arr.map((poruka) => (
             <p>{poruka}</p>
           ))}
         </div> */}
       <Navbar />
+      <main style = {{minWidth:"75vh"}}>
       <Routes>
-        <Route path="/" element={<Form />} />
+        <Route path="/" element={token ? <Hotels /> : <Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/hotels" element={<Hotels />} />
-        <Route path="/teams" element={<Teams />} />
-        <Route path="/quotes" element={<Quotes />} />
-        <Route path="/hotels/:id" element={<Hotel />} />
+        <Route
+          path="/about-us"
+          element={
+            <ProtectedRoute>
+              <AboutUs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/hotels"
+          element={
+            <ProtectedRoute>
+              <Hotels />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teams"
+            element={
+              <ProtectedRoute>
+                <Teams />
+              </ProtectedRoute>
+            }
+        />
+        <Route
+          path="/quotes"
+          element={
+            <ProtectedRoute>
+              <Quotes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/hotels/:id"
+          element={
+            <ProtectedRoute>
+              <Hotel />
+            </ProtectedRoute>
+          }
+        />
+
+<Route
+          path="*"
+          element={
+            <h1>Nepostojeca stranica</h1>
+          }
+        />  
+
       </Routes>
+      </main>
     </>
   );
 }
